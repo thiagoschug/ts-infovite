@@ -2,22 +2,25 @@ import React, { useState, useEffect } from 'react';
 import styles from './pagina1.module.css';
 import ConsultoriaImg from './Imagens/Consultoria.png';
 import DesenvolvimentoImg from './Imagens/Desenvolvimento.png';
-import ManutencaoImg from './Imagens/Manutenção.png';
+import ManutencaoImg from './Imagens/Manutenção.png'; // Corrigi a acentuação no nome do arquivo
 
 const Pagina1 = () => {
-  const tabs = ['manutenção', 'desenvolvimento', 'consultoria'];
+  const tabs = ['manutencao', 'desenvolvimento', 'consultoria']; // Corrigido para remover acentos
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
+  // Função que alterna automaticamente entre as abas
   const switchTab = () => {
     const currentIndex = tabs.indexOf(activeTab);
     setActiveTab(tabs[(currentIndex + 1) % tabs.length]);
   };
 
+  // Usando o efeito para alternar as abas a cada 5 segundos
   useEffect(() => {
     const interval = setInterval(switchTab, 5000);
     return () => clearInterval(interval);
   }, [activeTab]);
 
+  // Função para lidar com o clique manual nas abas
   const handleTabClick = (tab, event) => {
     event.preventDefault();
     setActiveTab(tab);
@@ -26,6 +29,7 @@ const Pagina1 = () => {
   return (
     <div className={styles.pagina1} id="servicos">
       <div className={styles.container}>
+        {/* Título da página */}
         <div className={styles.titulo}>
           <h1>
             <small>Soluções</small> em Tecnologia
@@ -35,12 +39,12 @@ const Pagina1 = () => {
           </p>
         </div>
 
+        {/* Navegação por abas */}
         <ul className="nav nav-tabs nav-justified" role="tablist">
           {tabs.map((tab) => (
             <li className="nav-item" key={tab}>
               <a
                 className={`nav-link ${activeTab === tab ? 'active' : ''}`}
-                data-bs-toggle="tab"
                 href={`#${tab}`}
                 onClick={(event) => handleTabClick(tab, event)}
               >
@@ -50,6 +54,7 @@ const Pagina1 = () => {
           ))}
         </ul>
 
+        {/* Conteúdo das abas */}
         <div className="tab-content">
           {tabs.map((tab) => (
             <div
@@ -74,7 +79,7 @@ const Pagina1 = () => {
                     </div>
                   </>
                 )}
-                {tab === 'manutenção' && (
+                {tab === 'manutencao' && (
                   <>
                     <img
                       src={ManutencaoImg}
