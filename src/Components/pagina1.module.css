@@ -1,0 +1,179 @@
+/* Importando fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilização do corpo da página */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Estilização da página principal */
+.pagina1 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 65px;
+}
+
+/* Estilização do contêiner de conteúdo */
+.container {
+    width: 80%;
+    max-width: 1400px;
+    padding: 20px;
+    background-color: #adc4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex; /* Use flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organize os itens em coluna */
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+/* Estilização do título */
+.titulo {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.titulo small {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.titulo h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.titulo p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Estilização de elementos pequenos */
+.small, small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+/* Estilização das abas de navegação */
+.nav-tabs {
+    border-bottom: 2px solid #007bff;
+    display: flex;
+    margin-bottom: 20px; /* Aumenta o espaço entre abas e conteúdo */
+}
+
+.nav-tabs .nav-item {
+    flex: 1;
+    margin-bottom: -1px;
+    text-align: center;
+}
+
+.nav-tabs .nav-link {
+    color: #e6e6e6;
+    font-weight: 500;
+    border: 1px solid #007bff;
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus {
+    background-color: #ffffff; /* Fundo branco */
+    color: #007bff; /* Texto azul */
+    border-color: #007bff; /* Borda azul */
+}
+
+/* Estilização de imagens responsivas */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Adicionando sombras aos elementos de texto */
+h2, p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização dos botões */
+button, .btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+}
+
+button:active, .btn:active {
+  transform: scale(0.95);
+}
+
+/* Estilização das abas */
+.tab-content {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  flex: 1;
+}
+
+/* Transição suave para o conteúdo das abas */
+.tab-pane {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.tab-pane.show {
+  opacity: 1;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 767px) {
+  .nav-tabs .nav-item {
+    flex: none;
+  }
+  
+  .tab-content {
+    min-height: 200px;
+    flex: 1;
+    
+  }
+  
+  .d-flex {
+    flex-direction: column;
+  }
+  
+  .d-flex img {
+    margin-bottom: 10px;
+  }
+}

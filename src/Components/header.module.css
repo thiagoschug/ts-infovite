@@ -1,0 +1,28 @@
+/* header.module.css */
+
+.logo {
+  width: 95px;
+}
+
+.button {
+  color: antiquewhite;
+}
+
+/* Mantendo a barra de navegação inicialmente transparente */
+.transparent {
+  background-color: transparent !important;
+}
+
+/* Estilo quando a página é rolada */
+.scrolled {
+  background-color: rgba(255, 255, 255, 0.2); /* Um leve fundo branco translúcido */
+  backdrop-filter: blur(10px); /* Adiciona um efeito de desfoque */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve ao rolar */
+}
+
+/* Sem mudança de cor ao rolar (fundo transparente) */
+nav {
+  background-color: transparent;
+  box-shadow: none;
+}

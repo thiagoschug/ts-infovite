@@ -1,0 +1,12 @@
+
+
+/* Estilos básicos para o corpo */
+body {
+  display: flex;
+  place-items: center;
+  margin: 0; /* Remove as margens padrão */
+  padding: 0; /* Remove o padding padrão */
+  height: 100vh; /* Altura 100% da janela */
+  width: 100vw; /* Largura 100% da janela */
+}
+
